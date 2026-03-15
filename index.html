@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpiceUP.online | Design, Build, Operate</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        background-color: #f3f4f6;
+      }
+      .font-inter {
+        font-family: 'Inter', sans-serif;
+      }
+      .halftone {
+        background-image: radial-gradient(circle, #000 1px, transparent 1px);
+        background-size: 4px 4px;
+        opacity: 0.1;
+      }
+      .tech-border {
+        border: 2px solid #000;
+        box-shadow: 6px 6px 0px #000;
+      }
+      .tech-border-red {
+        border: 2px solid #ff3b30;
+        box-shadow: 6px 6px 0px #ff3b30;
+      }
+      
+      /* Spiced Image System - v4: High Reliability */
+      .spiced-container {
+        position: relative;
+        background-color: #1a1a1a;
+        overflow: hidden;
+      }
+      .spiced-image {
+        background-color: #333; /* Fallback color */
+        filter: grayscale(1) contrast(1.1) brightness(0.8) sepia(1) hue-rotate(-50deg) saturate(2);
+        transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .spiced-container:hover .spiced-image {
+        filter: grayscale(0) contrast(1) brightness(1) sepia(0) saturate(1);
+        transform: scale(1.05);
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes tech-scan {
+        0% { transform: translateY(-100%); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(100%); opacity: 0; }
+      }
+      .animate-tech-scan {
+        animation: tech-scan 2s linear infinite;
+      }
+
+      @keyframes tech-pulse {
+        0%, 100% { transform: scale(1); opacity: 0.5; }
+        50% { transform: scale(1.1); opacity: 1; }
+      }
+      .animate-tech-pulse {
+        animation: tech-pulse 1.5s ease-in-out infinite;
+      }
+
+      @keyframes brutal-pulse {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
+        50% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(255, 59, 48, 0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
+      }
+      .hover-brutal-pulse:hover {
+        animation: brutal-pulse 1.5s infinite ease-in-out;
+      }
+
+      @keyframes flicker {
+        0% { opacity: 1; }
+        5% { opacity: 0.8; }
+        10% { opacity: 1; }
+        15% { opacity: 0.7; }
+        20% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+      .animate-flicker {
+        animation: flicker 4s linear infinite;
+      }
+
+      @keyframes data-flow {
+        0% { transform: scaleX(0); transform-origin: left; }
+        50% { transform: scaleX(1); transform-origin: left; }
+        51% { transform: scaleX(1); transform-origin: right; }
+        100% { transform: scaleX(0); transform-origin: right; }
+      }
+      .animate-data-flow {
+        animation: data-flow 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
